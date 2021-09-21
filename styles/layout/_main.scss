@@ -1,0 +1,106 @@
+@use "../abstracts";
+/*
+Home page of the web
+*/
+
+// background image settings
+main::before {
+  content: "";
+  background-size: cover;
+  background-color: hsl(0, 0%, 60%);
+  background-blend-mode: multiply;
+  position: fixed;
+  min-width: 100vw;
+  min-height: 100vh;
+  z-index: -1;
+}
+
+.content {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: static;
+  z-index: 3;
+  
+}
+
+.wrapper_quote {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  width: 100%;
+
+  @include abstracts.breakpoint-up(medium) {
+    max-width: 35.8125rem;
+  }
+}
+
+.quote {
+  display: flex;
+  flex-direction: column-reverse;
+
+  blockquote {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+// refresh button for the quote
+.refresh {
+  background-color: transparent;
+  border: none;
+  margin-top: 0.5rem;
+  cursor: pointer;
+
+  &:hover .refresh__icon{
+    opacity: 1;
+  }
+}
+
+.time-details {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+
+  @include abstracts.breakpoint-up(medium) {
+    gap: 5rem;
+  }
+
+  @include abstracts.breakpoint-up(large) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 0;
+  }
+
+  &__greeting {
+    display: inline-block;
+
+    &:before {
+      content: url("./../assets/desktop/icon-sun.svg");
+      margin-right: 0.6rem;
+      vertical-align: middle;
+      display: inline-block;
+    }
+  }
+}
+
+.timezone {
+  font-weight: 300;
+  font-size: 0.9375rem;
+  line-height: 1.75rem;
+  letter-spacing: 0;
+  padding-left: 1rem;
+  @include abstracts.breakpoint-up(medium) {
+    font-size: 2rem;
+    line-height: 1.75rem;
+  }
+  @include abstracts.breakpoint-up(large) {
+    font-size: 2.5rem;
+    line-height: 1.75rem;
+    letter-spacing: 1px;
+  }
+}

@@ -1,0 +1,479 @@
+/*
+Media queries mixin
+*/
+/*
+Color themes for the Day and Night theme
+ color themes  https://medium.com/@sanuthadathil/theme-and-color-scheme-sass-way-a62d68614ef3
+ each sass  https://sass-lang.com/documentation/at-rules/control/each
+ mixin theme  https://www.sassmeister.com/gist/9342576
+ mixin maps theme https://www.sitepoint.com/dealing-color-schemes-sass/
+*/
+main.day::before {
+  background-image: url('./../assets/mobile/bg-image-daytime.jpg');
+}
+@media only screen and (min-width: 40em) {
+  main.day::before {
+    background-image: url('./../assets/tablet/bg-image-daytime.jpg');
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  main.day::before {
+    background-image: url('./../assets/desktop/bg-image-daytime.jpg');
+  }
+}
+
+.day .h2-style,
+.day .h6-style {
+  color: #303030;
+}
+.day .day-details {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+.day .day-details__column {
+  justify-content: flex-start;
+}
+@media only screen and (min-width: 67.5em) {
+  .day .day-details__column:first-child {
+    border-right: 1px solid rgba(48, 48, 48, 0.25);
+    padding-right: 5.875rem;
+  }
+}
+
+main.night::before {
+  background-image: url('./../assets/mobile/bg-image-nighttime.jpeg');
+}
+@media only screen and (min-width: 40em) {
+  main.night::before {
+    background-image: url('./../assets/tablet/bg-image-nighttime.jpeg');
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  main.night::before {
+    background-image: url('./../assets/desktop/bg-image-nighttime.jpeg');
+  }
+}
+
+.night .h2-style,
+.night .h6-style {
+  color: white;
+}
+.night .day-details {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+.night .day-details__column {
+  justify-content: flex-start;
+}
+@media only screen and (min-width: 67.5em) {
+  .night .day-details__column:first-child {
+    border-right: 1px solid rgba(255, 255, 255, 0.25);
+    padding-right: 5.875rem;
+  }
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.125rem;
+  overflow-x: hidden;
+}
+
+.h1-style {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  color: #ffffff;
+  margin-block: 1rem;
+  font-size: 6.25rem;
+  line-height: 6.25rem;
+  letter-spacing: -2.5px;
+}
+@media only screen and (min-width: 40em) {
+  .h1-style {
+    font-size: 10.9375rem;
+    line-height: 10.9375rem;
+    letter-spacing: -4.375px;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  .h1-style {
+    font-size: 12.5rem;
+    line-height: 12.5rem;
+    letter-spacing: -5px;
+  }
+}
+
+.h2-style {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  margin-top: 0.5rem;
+}
+@media only screen and (min-width: 40em) {
+  .h2-style {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  .h2-style {
+    font-size: 3.5rem;
+    line-height: 4.25rem;
+  }
+}
+
+.h3-style {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 28px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-block: 0;
+}
+@media only screen and (min-width: 40em) {
+  .h3-style {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    letter-spacing: 3.6px;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  .h3-style {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    letter-spacing: 4.8px;
+  }
+}
+
+.h4-style {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.9375rem;
+  line-height: 1.5625rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-block: 0;
+}
+@media only screen and (min-width: 40em) {
+  .h4-style {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    letter-spacing: 3.6px;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  .h4-style {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    letter-spacing: 4px;
+  }
+}
+
+.h5-style {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 0.75rem;
+  line-height: 1.375rem;
+  color: #ffffff;
+}
+@media only screen and (min-width: 40em) {
+  .h5-style {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  .h5-style {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
+.h6-style {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  margin-block: 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+@media only screen and (min-width: 40em) {
+  .h6-style {
+    font-size: 13px;
+    line-height: 28px;
+    letter-spacing: 2.6px;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  .h6-style {
+    font-size: 0.9375rem;
+    line-height: 1.75rem;
+    letter-spacing: 3px;
+  }
+}
+
+p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1.375rem;
+  color: #ffffff;
+}
+@media only screen and (min-width: 40em) {
+  p {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
+blockquote {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1.375rem;
+  color: #ffffff;
+}
+@media only screen and (min-width: 40em) {
+  blockquote {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.container {
+  padding: 2rem 1.5625rem 2.5rem;
+}
+@media only screen and (min-width: 40em) {
+  .container {
+    padding: 5rem 4rem 4rem;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  .container {
+    padding: 3.5rem 10.3125rem 6.125rem;
+  }
+}
+
+.large-only {
+  display: none;
+}
+@media only screen and (min-width: 40em) {
+  .large-only {
+    display: inline-block;
+  }
+}
+
+.sr-only {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.button {
+  border: none;
+  border-radius: 3.5rem;
+  background-color: #ffffff;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  padding: 0.25rem 0.25rem 0.25rem 1.0625rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+@media only screen and (min-width: 40em) {
+  .button {
+    font-size: 1rem;
+    line-height: 1.75rem;
+    padding: 0.5rem 0.7rem 0.5rem 1.5rem;
+  }
+}
+.button:hover img {
+  opacity: 0.7;
+}
+.button img {
+  box-sizing: content-box;
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  padding-left: 0.9375rem;
+}
+@media only screen and (min-width: 40em) {
+  .button img {
+    width: 2.5rem;
+    height: 2.5rem;
+    padding-left: 1rem;
+  }
+}
+
+button:focus {
+  border: white 2px dashed;
+}
+
+.rotation img {
+  transform: rotate(180deg);
+  padding-right: 0.9375rem;
+  padding-left: 0;
+}
+
+/*
+Home page of the web
+*/
+main::before {
+  content: '';
+  background-size: cover;
+  background-color: #999999;
+  background-blend-mode: multiply;
+  position: fixed;
+  min-width: 100vw;
+  min-height: 100vh;
+  z-index: -1;
+}
+
+.content {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: static;
+  z-index: 3;
+}
+
+.wrapper_quote {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  width: 100%;
+}
+@media only screen and (min-width: 40em) {
+  .wrapper_quote {
+    max-width: 35.8125rem;
+  }
+}
+
+.quote {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.quote blockquote {
+  padding: 0;
+  margin: 0;
+}
+
+.refresh {
+  background-color: transparent;
+  border: none;
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+.refresh:hover .refresh__icon {
+  opacity: 1;
+}
+
+.time-details {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+@media only screen and (min-width: 40em) {
+  .time-details {
+    gap: 5rem;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  .time-details {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 0;
+  }
+}
+.time-details__greeting {
+  display: inline-block;
+}
+.time-details__greeting:before {
+  content: url('./../assets/desktop/icon-sun.svg');
+  margin-right: 0.6rem;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.timezone {
+  font-weight: 300;
+  font-size: 0.9375rem;
+  line-height: 1.75rem;
+  letter-spacing: 0;
+  padding-left: 1rem;
+}
+@media only screen and (min-width: 40em) {
+  .timezone {
+    font-size: 2rem;
+    line-height: 1.75rem;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  .timezone {
+    font-size: 2.5rem;
+    line-height: 1.75rem;
+    letter-spacing: 1px;
+  }
+}
+
+.day-details {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media only screen and (min-width: 40em) {
+  .day-details {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 5.875rem;
+  }
+}
+.day-details__item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+@media only screen and (min-width: 40em) {
+  .day-details__item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media only screen and (min-width: 40em) {
+  .day-details .no-margin {
+    margin-bottom: 0;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

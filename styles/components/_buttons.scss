@@ -1,0 +1,57 @@
+@use "../base";
+@use "../abstracts";
+
+.button {
+    border: none;
+    border-radius: 3.5rem;
+    background-color: base.$light;
+    color: base.$primary-50;
+    font-size: 0.75rem;
+    line-height: 0.875rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    padding: 0.25rem 0.25rem 0.25rem 1.0625rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+
+    @include abstracts.breakpoint-up(medium) {
+        font-size: 1rem;
+        line-height: 1.75rem;
+        padding: 0.5rem 0.7rem 0.5rem 1.5rem;
+    }
+
+    
+
+    &:hover img{
+        opacity: 0.7;
+    }
+
+    img {
+        box-sizing: content-box;
+        display: inline-block;
+        width: 2rem;
+        height: 2rem;
+        padding-left: 0.9375rem;
+
+        @include abstracts.breakpoint-up(medium) {
+            width: 2.5rem;
+            height: 2.5rem;
+            padding-left: 1rem;
+        }
+    }
+}
+
+button:focus {
+    border: white 2px dashed;
+}
+
+
+
+//class for the rotation of arrow
+.rotation img {
+    transform: rotate(180deg);
+    padding-right: 0.9375rem;
+    padding-left: 0;
+}

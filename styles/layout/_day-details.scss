@@ -1,0 +1,34 @@
+@use "../base";
+@use "../abstracts";
+
+.day-details {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include abstracts.breakpoint-up(medium) {
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 5.875rem;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        @include abstracts.breakpoint-up(medium) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    .no-margin {
+        @include abstracts.breakpoint-up(medium) {
+        margin-bottom: 0;
+        }
+    }
+}
