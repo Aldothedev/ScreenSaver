@@ -1,39 +1,6 @@
-# Frontend Mentor - Clock app solution
+# Screen Saver
 
-This is a solution to the [Clock app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/clock-app-LMFaxFwrM). I am proud to be a PRO!  ❤️‍🔥
-
-## Table of contents
-
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-## Overview
-
-### The challenge
-
-Users should be able to:
-
-- View the optimal layout for the site depending on their device's screen size
-- See hover states for all interactive elements on the page
-- View the current time and location information based on their IP address
-- View additional information about the date and time in the expanded state
-- Be shown the correct greeting and background image based on the time of day they're visiting the site
-- Generate random programming quotes by clicking the refresh icon near the quote
-
-### Links
-
-- Solution URL: [Frontendmentor.io](https://www.frontendmentor.io/solutions/clock-app-scss-flexbox-js-spgTo74dQ)
-- Live Site URL: [Vercel link](https://fm-clock-app-blond.vercel.app/)
-
-## My process
+### See The Live Site: [Screen Saver](https://aldothedev.github.io/ScreenSaver/)
 
 ### Built with
 
@@ -77,17 +44,3 @@ I would like to study more about scss, especially mixins. I think it is really p
 ### Useful resources
 
 - [Medium.com Theme and Color scheme - SASS Way](https://medium.com/@sanuthadathil/theme-and-color-scheme-sass-way-a62d68614ef3) - This helped me with the color scheme setup.
-
-
-## Author
-
-- Frontend Mentor - [@sirriah](https://www.frontendmentor.io/profile/sirriah)
-- LinkedIn - [Tereza Fatkova](https://www.linkedin.com/in/tereza-dvorakova-beroun/)
-
-
-## Acknowledgments
-
-Thank to the [Alex Kim](https://www.frontendmentor.io/profile/Alex-K1m), who helped me with the two silly typos. Yes, now I use linter everytime. :)
-Happy coding 👋👩‍🦰
-
-
