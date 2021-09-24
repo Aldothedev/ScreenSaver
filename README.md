@@ -7,6 +7,7 @@
 - Semantic HTML5 markup
 - SCSS with 7-1 architecture
 - Flexbox
+- API's
 - Mobile-first workflow
 - ESLint, git
 
